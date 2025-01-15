@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Portfolio</title>
+    <title>portfolio</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -13,32 +13,28 @@
     <style>
       body {
         font-family: "Arial", sans-serif;
-        background-color: #f3cc82;
-        color: #3d3c3a;
+        background-color: white;
+        color: black;
       }
       .navbar {
-        background-color: #ebd598;
-        padding: 20px 0;
-        flex-direction: column;
-        align-items: center;
+        background-color: #ffdb02;
+        padding: 10px 20px;
       }
-      .navbar-brand img {
-        width: 60px;
-        height: 60px;
+      .navicon {
+        margin: 0;
+      }
+      .navicon img {
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
       }
-      .navbar-brand p {
-        font-weight: bold;
-        color: white;
-        font-size: 20px;
-      }
-      .navbar-nav {
-        display: flex;
-        flex-wrap: nowrap;
+      .nav {
+        flex-grow: 1;
+        justify-content: center;
         gap: 15px;
       }
-      .nav-link {
-        color: white !important;
+      .navlink {
+        color: black !important;
         font-weight: bold;
         padding: 10px;
       }
@@ -49,39 +45,47 @@
         padding: 60px 0;
         text-align: center;
       }
-      .profile-text {
+      .proftext {
         flex: 1;
         padding-right: 30px;
       }
-      .profile-text h2 {
+      .proftext h2 {
         font-size: 30px;
         margin-bottom: 15px;
         font-weight: bold;
         align-items: start;
+        color: black;
       }
-      .profile-text p {
+      .proftext p {
         font-size: 18px;
         margin-bottom: 20px;
+        color: #333;
       }
-      .profile-image {
+      .profpic {
         flex: 1;
         display: flex;
         justify-content: center;
       }
-      .profile-image img {
+      .profpic img {
         border-radius: 50%;
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         object-fit: cover;
         border: 5px solid #d1b873;
       }
-      .projects-section {
+      .highlight {
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        color: #d1a103;
+      }
+      .projs {
         padding: 60px 0;
         text-align: center;
       }
-      .projects-section h2 {
+      .projs h2 {
         font-size: 30px;
         margin-bottom: 40px;
+        color: black;
       }
       .card {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -91,130 +95,165 @@
         object-fit: cover;
         height: 200px;
       }
-      .card-body h5 {
+      .cbody h5 {
         font-size: 18px;
+        color: black;
       }
-      .card-body p {
+      .cbody p {
         font-size: 16px;
+        color: #333;
       }
       footer {
-        background-color: #fae6b0;
+        background-color: #ffdc03;
         text-align: center;
         padding: 10px 0;
-        color: white;
+        color: black;
+      }
+      #education {
+        padding: 60px 0;
+        text-align: center;
+        background-color: #f9f9f9;
+      }
+      #education h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+        color: black;
+        font-weight: bold;
+      }
+      .educitem {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      .educitem h3 {
+        font-size: 24px;
+        color: #333;
+        font-weight: bold;
+      }
+      .educitem p {
+        font-size: 16px;
+        color: #666;
+        margin-top: 10px;
       }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-light flex-column text-center">
-      <a class="navbar-brand mx-auto mb-3" href="#">
-        <img src="https://via.placeholder.com/60x60.png?text=Logo" alt="Logo" />
-        <p class="mt-2 mb-0">Iljiii</p>
-      </a>
-      <ul class="navbar-nav flex-row justify-content-center">
-        <li class="nav-item mx-2">
-          <a class="nav-link active" href="#profile">Profile</a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-light">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <a class="navicon" href="#">
+          <img src="images/iljiicon.png" alt="HIMAWARI" />
+        </a>
+        <ul class="nav flex-row justify-content-end">
+          <li class="nav-item mx-2">
+            <a class="navlink active" href="#profile">PROFILE</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="navlink" href="#projects">PROJECT</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="navlink" href="#skills">SKILLS</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="navlink" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <section id="profile" class="profile-section">
+    <div id="profile" class="profile-section">
       <div class="container d-flex">
-        <div class="profile-text">
-          <h2>Eljay Ralden</h2>
+        <div class="proftext">
+          <h2>Hello I'm <span class="highlight">Eljay Raldeeen</span></h2>
           <p>
-            Welcome to my portfolio! Here you’ll find more about me and
-            my projects.
-</p> 
-
-        
-           
+            Welcome to my portfolio! Here you’ll find more about me, skills,   and my
+            projects.
           </p>
-        
         </div>
-        <div class="profile-image">
-          <img
-            src="https://via.placeholder.com/200x200.png?text=Profile"
-            alt="Profile Picture"
-          />
+        <div class="profpic">
+          <img src="images/ilji.jpg" alt="Profile Picture" />
         </div>
-        
       </div>
-    </section>
+    </div>
 
-    <!-- <section id="projects" class="projects-section">
-      <div class="container">
-        <h2>My Projects</h2>
-        <div class="row">
-          <div class="col-12 mb-4">
-            <div class="card">
-              <img
-                src="https://via.placeholder.com/350x200.png?text=Project+1"
-                class="card-img-top"
-                alt="Project 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Project 1</h5>
-                <p class="card-text">
-                  A web application I built using HTML, CSS, and JavaScript.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mb-4">
-            <div class="card">
-              <img
-                src="https://via.placeholder.com/350x200.png?text=Project+2"
-                class="card-img-top"
-                alt="Project 2"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Project 2</h5>
-                <p class="card-text">
-                  A responsive website with the Bootstrap framework.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mb-4">
-            <div class="card">
-              <img
-                src="https://via.placeholder.com/350x200.png?text=Project+3"
-                class="card-img-top"
-                alt=
-              />
-              <div class="card-body">
-                <h5 class="card-title">Project 3</h5>
-                <p class="card-text">
-                  A creative design project I worked on in my free time.
-                </p>
-              </div>
-            </div>
-          </div>
+    <div id="skills" class="container text-center">
+      <h2>Skills</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Programming</h4>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Tools</h4>
+          <ul>
+            <li>VS Code</li>
+            <li>Git</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Soft Skills</h4>
+          <ul>
+            <li>Teamwork</li>
+            <li>Leadership</li>
+            <li>Problem-Solving</li>
+          </ul>
         </div>
       </div>
-    </section> -->
-    
-    <section id="contact" class="text-center">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <p>
-          20211489@nbsc.edu.ph
-        </p>
-        <a href="mailto:youremail@example.com" class="btn btn-warning"
-          >Email</a
-        >
+    </div>
+
+    <div id="projects" class="projs">
+      <h2>My Latest Project</h2>
+      <div class="card" style="width: 18rem; margin: 0 auto">
+        <img src="images/caps.jpeg" class="card-img-top" alt="Project Image" />
+        <div class="cbody">
+          <h5 class="card-title">CAPSTONE PROJECT</h5>
+          <p class="card-text">
+            A 2D game made with Unity that revolves around solving puzzles in a
+            fire-related environment. In this game, players must navigate
+            through different levels by solving challenges that involve fire and
+            heat, using logic and quick thinking to survive.
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <div id="education" class="container">
+      <h2>Educational Background</h2>
+      <div class="educitem">
+        <h3>PRIMARY</h3>
+        <p>
+          Manolo Fortich Central Elementary School <strong>(2009-2015)</strong>
+        </p>
+      </div>
+      <div class="educitem">
+        <h3>SECONDARY</h3>
+        <p>Manolo Fortich National High School <strong>(2015-2020)</strong></p>
+      </div>
+      <div class="educitem">
+        <h3>Tertiary</h3>
+        <p>Northern Bukidnon State College <strong>(2021-present)</strong></p>
+      </div>
+    </div>
+
+    <div id="contact" class="text-center">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p>20211489@nbsc.edu.ph</p>
+      </div>
+    </div>
+
     <footer>
       <p>&copy; 2025</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   </body>
