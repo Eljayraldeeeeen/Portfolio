@@ -14,40 +14,36 @@
       background-color: white;
       color: black;
     }
-
+  
     .navbar {
       background-color: #ffdb02;
       padding: 10px 20px;
     }
-
-    .navicon {
-      margin: 0;
-    }
-
+  
     .navicon img {
       width: 80px;
       height: 80px;
       border-radius: 50%;
       cursor: pointer;
     }
-
+  
     .nav {
       flex-grow: 1;
       justify-content: center;
       gap: 15px;
     }
-
+  
     .navlink {
       color: black !important;
       font-weight: bold;
       padding: 10px;
       transition: color 0.3s ease;
     }
-
+  
     .navlink:hover {
       color: white !important;
     }
-
+  
     .profsec {
       display: flex;
       justify-content: center;
@@ -56,32 +52,32 @@
       text-align: center;
       flex-wrap: wrap;
     }
-
+  
     .proftext {
       flex: 1;
       padding-right: 30px;
       text-align: left;
     }
-
+  
     .proftext h2 {
       font-size: 30px;
       margin-bottom: 15px;
       font-weight: bold;
       color: black;
     }
-
+  
     .proftext p {
       font-size: 18px;
       margin-bottom: 20px;
       color: #333;
     }
-
+  
     .profpic {
       flex: 1;
       display: flex;
       justify-content: end;
     }
-
+  
     .profpic img {
       border-radius: 50%;
       width: 300px;
@@ -89,7 +85,7 @@
       object-fit: cover;
       border: 5px solid #d1b873;
     }
-
+  
     .profsec .container {
       display: flex;
       justify-content: center;
@@ -97,59 +93,26 @@
       gap: 20px;
       max-width: 1000px;
     }
-
-    .highlight {
-      font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      color: #ffdc03;
-    }
-
-    .cursor {
-      display: inline-block;
-      width: 4px;
-      background-color: black;
-      animation: blink 1s step-start infinite;
-      margin-left: 2px;
-    }
-
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
+  
     .aboutme {
       padding: 10px 0;
       text-align: center;
       background-color: #f0db51;
     }
-
+  
     .aboutme h2 {
       font-size: 30px;
       margin-bottom: 30px;
       color: black;
       font-weight: bold;
     }
-
+  
     .aboutme p {
       font-size: 18px;
       color: #000000;
       margin-bottom: 5px;
     }
-
-    .sectitle {
-      font-size: 32px;
-      margin-bottom: 10px;
-      color: black;
-      font-weight: bold;
-    }
-
+  
     .educitem,
     .seminaritem {
       margin-bottom: 5px;
@@ -158,39 +121,18 @@
       border-radius: 8px;
       color: #333;
     }
-
-    .educitem {
-      background-color: #fff6b3;
-    }
-
-    .seminaritem {
-      background-color: #dbfadb;
-    }
-
-    .educitem h3,
-    .seminaritem h3 {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .educitem p,
-    .seminaritem p {
-      font-size: 16px;
-      color: #666;
-      margin-top: 5px;
-    }
-
+  
     .projs {
       padding: 20px 0;
       text-align: center;
     }
-
+  
     .projs h2 {
       font-size: 30px;
       margin-bottom: 40px;
       color: black;
     }
-
+  
     .projcontainer {
       display: flex;
       align-items: center;
@@ -199,61 +141,121 @@
       margin: 0 auto;
       max-width: 900px;
     }
-
+  
     .projcontainer img {
       width: 30%;
       height: auto;
       object-fit: cover;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
+  
     .projdesc {
       flex: 1;
       text-align: left;
     }
-
-    .projdesc h5 {
-      font-size: 18px;
-      color: black;
-      margin-bottom: 10px;
+  
+    @media (max-width: 768px) {
+      .proftext {
+        padding-right: 0;
+        text-align: center;
+      }
+  
+      .profpic {
+        justify-content: center;
+      }
+  
+      .profpic img {
+        width: 200px;
+        height: 200px;
+      }
+  
+      .projcontainer {
+        flex-direction: column;
+      }
+  
+      .projcontainer img {
+        width: 90%;
+      }
+  
+      .projdesc {
+        text-align: center;
+      }
+  
+      .navbar {
+        flex-direction: column;
+        padding: 10px;
+      }
+  
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+  
+      .navlink {
+        padding: 5px;
+      }
     }
-
-    .projdesc p {
-      font-size: 16px;
-      color: #333;
+  
+    @media (max-width: 576px) {
+      .proftext h2 {
+        font-size: 24px;
+      }
+  
+      .proftext p {
+        font-size: 16px;
+      }
+  
+      .aboutme h2 {
+        font-size: 24px;
+      }
+  
+      .projdesc h5 {
+        font-size: 16px;
+      }
+  
+      .projdesc p {
+        font-size: 14px;
+      }
     }
-
-    footer {
-      background-color: #221008;
-      text-align: center;
-      padding: 10px 0;
-      color: black;
-    }
-  </style>
+  </style>  
 </head>
 
 <body>
-  <nav class="navbar navbar-light">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <a class="navicon" href="#" onclick="location.reload()">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand navicon" href="#" onclick="location.reload()">
         <img src="images/iljiicon.png" alt="HIMAWARI" />
       </a>
-      <ul class="nav flex-row justify-content-end">
-        <li class="nav-item mx-2">
-          <a class="navlink active" href="#profile">PROFILE</a>
-        <li class="nav-item mx-2">
-          <a class="navlink" href="#aboutme">ABOUT ME</a>
-        </li>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="navlink" href="#projects">PROJECT</a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="navlink" href="#contact">CONTACT</a>
-        </li>
-      </ul>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link navlink active" href="#profile">PROFILE</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link navlink" href="#aboutme">ABOUT ME</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link navlink" href="#projects">PROJECT</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link navlink" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
+  
 
   <div id="profile" class="profsec">
     <div class="container d-flex">
